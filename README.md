@@ -1,5 +1,11 @@
 # Music-License-Repository
 
+[![License](https://img.shields.io/badge/license-Custom%20License-brightgreen)](link-to-license) <!-- Replace with your license link -->
+<!-- [![Downloads](https://img.shields.io/badge/downloads-1000%2B-blue)](link-to-downloads)  Replace with actual download link -->
+<!-- [![Contributors](https://img.shields.io/badge/contributors-5-orange)](link-to-contributors)  Replace with actual contributors link -->
+
+<img src="./LPI.png" alt="Repository Image" width="200"> <!-- Adjust width and height as needed -->
+
 Yes, it is legally possible to create a streamlined licensing process where the repository name itself serves as the title for the songs uploaded. This way, users can upload their MP3 files without needing to reference each song individually in the license agreement. Here’s how you can structure your README to reflect this approach:
 
 ---
