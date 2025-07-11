@@ -6,7 +6,7 @@
 
 <img src="https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/LPI.png" alt="License Repository Image" width="200"> <!-- Adjust width and height as needed -->
 
-Yes, it is legally possible to create a streamlined licensing process where the repository name itself serves as the title for the songs uploaded. This way, users can upload their MP3 files without needing to reference each song individually in the license agreement. Here’s how you can structure your README to reflect this approach:
+Yes, it is legally possible to create a streamlined licensing process where the repository name itself serves as the title for the songs uploaded. This way, users can upload their MP3 files or music files in ANY FORMAT without needing to reference each song individually in the license agreement. Here’s how you can structure your README to reflect this approach:
 
 # [Repository Name] Music License Repository
 
@@ -28,9 +28,9 @@ The goal of this project is to create a user-friendly repository where artists c
 
 5. **Get Started**: Your music is now licensed for use under the specified terms, allowing you to focus on creating more works!
 
-<img src="https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/public/images/UTC-Large.png" alt="Music Repository Image" width="100">
+# Custom Music License Agreement
 
-# 🎵 Custom Music License Agreement README
+<img src="https://raw.githubusercontent.com/thaumaturgists/SDCM/main/images/MusicLicenseRepository/Logos/UTC-Large.png" alt="Music Repository Image" width="100">
 
 This repository provides curated music works under a **custom license** designed to protect creators while enabling responsible reuse. Please read this guide and the [LICENSE](https://github.com/thaumaturgists/Music-License-Repository/blob/main/LICENSE) file thoroughly before using any content.
 
