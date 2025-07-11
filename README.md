@@ -1,6 +1,6 @@
 # Music-License-Repository
 
-[![License](https://img.shields.io/badge/license-Custom%20License-brightgreen)](link-to-license) <!-- Replace with your license link -->
+[![License](https://img.shields.io/badge/license-Custom%20License-brightgreen)](https://github.com/thaumaturgists/Music-License-Repository/blob/main/LICENSE) <!-- Replace with your license link -->
 <!-- [![Downloads](https://img.shields.io/badge/downloads-1000%2B-blue)](link-to-downloads)  Replace with actual download link -->
 <!-- [![Contributors](https://img.shields.io/badge/contributors-5-orange)](link-to-contributors)  Replace with actual contributors link -->
 
