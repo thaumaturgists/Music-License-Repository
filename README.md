@@ -30,61 +30,84 @@ The goal of this project is to create a user-friendly repository where artists c
 
 <img src="https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/public/images/UTC-Large.png" alt="Music Repository Image" width="100">
 
-## Custom Music License Agreement
+# 🎵 Custom Music License Agreement README
 
-**Effective Date:** [Insert Date]
-
-**Licensor:** [Your Name or Your Entity Name]  
-**Contact Information:** [Your Email Address or Website]
-
-**Licensee:** [The individual or entity using the song]
-
-### 1. **Grant of License**
-The Licensor grants the Licensee a non-exclusive, worldwide license to use any music file uploaded to the **[Repository Name]** (the "Work") under the following terms:
-
-### 2. **Permitted Uses**
-The Licensee may use the Work for the following purposes:
-- **Commercial Use**: The Licensee may use the Work in commercial projects, including but not limited to advertisements, films, and video games.
-- **Public Performance**: The Licensee may perform the Work publicly, including live performances and broadcasts.
-- **Synchronization**: The Licensee may synchronize the Work with visual media, including films, videos, and presentations.
-
-### 3. **Attribution**
-The Licensee agrees to provide appropriate credit to the Licensor in the following manner:
-- "Music by [Your Name or Your Entity Name]"
-
-### 4. **License Requirement**
-The Licensee must obtain a separate license for each individual Work before using it. This license is granted upon agreement to the terms outlined in this License Agreement.
-
-### 5. **Restrictions**
-The Licensee may not:
-- Alter, remix, or create derivative works of the Work without prior written consent from the Licensor.
-- Use the Work in any manner that is unlawful or that could damage the reputation of the Licensor.
-- Use the Work without obtaining the necessary license for each individual Work.
-
-### 6. **Termination**
-This License Agreement may be terminated by the Licensor if the Licensee fails to comply with any of the terms outlined herein. Upon termination, the Licensee must cease all use of the Work.
-
-### 7. **Governing Law**
-This License Agreement shall be governed by and construed in accordance with the laws of the country of [Your Country].
-
-### 8. **Acceptance**
-By uploading a Work to the **[Repository Name]**, the Licensee agrees to the terms of this License Agreement.
-
-## License
-
-The music files in this repository are licensed under the terms outlined in the [LICENSE](https://github.com/thaumaturgists/Music-License-Repository/blob/main/LICENSE) file. This repository not only serves as a showcase of how to use the licensing process but also represents my personal approach to expressing these licensing terms. Please review the [LICENSE](https://github.com/thaumaturgists/Music-License-Repository/blob/main/LICENSE) file for details on how you can use the music.
-
-### Legal Resources
-
-For more information on music licensing and copyright, consider the following resources:
-
-- **U.S. Copyright Office**: [www.copyright.gov](https://www.copyright.gov)
-- **American Society of Composers, Authors, and Publishers (ASCAP)**: [www.ascap.com](https://www.ascap.com)
-- **Broadcast Music, Inc. (BMI)**: [www.bmi.com](https://www.bmi.com)
-- **Music Publishers Association (MPA)**: [www.mpaonline.org](https://www.mpaonline.org)
-
-For any legal inquiries or specific questions regarding this license agreement, please consult a legal professional.
+This repository provides curated music works under a **custom license** designed to protect creators while enabling responsible reuse. Please read this guide and the [LICENSE](https://github.com/thaumaturgists/Music-License-Repository/blob/main/LICENSE) file thoroughly before using any content.
 
 ---
 
-This structure ensures that each work uploaded to the repository is covered under the license agreement while clarifying that individual licenses are required for use.
+## 📆 Effective Date  
+`[Insert Date]`
+
+## 👤 Licensor Information  
+- **Name or Entity**: `[Your Name or Your Entity Name]`  
+- **Contact**: `[Your Email Address, GitHub Profile, or Website]`
+
+## 📩 Licensee (User of the Music)  
+Replace with the name or organization using the music.  
+`[Insert Licensee Name]`
+
+---
+
+## 🔐 Summary of License Terms
+
+This repository is governed by a **Custom Music License Agreement** that grants rights **only through explicit written consent from the Licensor**. No usage rights are automatic. You must request and receive consent for every individual Work.
+
+### ✅ Permitted Evaluation (No Written License Required)
+- Download or fork the repository for **personal, non-commercial evaluation**.  
+- Preview music files through GitHub or local playback.
+
+### 🚫 Use Requires Written License
+If you intend to:
+- Use the Work **commercially**  
+- **Perform publicly**, either live or broadcast  
+- **Synchronize** with videos, games, or presentations  
+- **Modify**, remix, or create derivatives  
+- Or **redistribute** the Work
+
+You must first contact the Licensor and receive a **Written License** that defines your permission, scope, and any royalty obligations.
+
+---
+
+## ✍️ Attribution Format  
+Any licensed use must include credit:
+
+> “Music by [Your Name or Your Entity Name]”
+
+---
+
+## ❗ Restrictions  
+Without a Written License, you may **not**:
+- Distribute, remix, or modify the Work.  
+- Use the Work for any commercial or public purpose.  
+- Misrepresent authorship or licensing status.  
+- Violate laws or use the Work in harmful contexts.
+
+---
+
+## ⚖️ Legal Enforcement & Jurisdiction  
+This license is governed by the laws of:  
+`[Insert Your Country or Jurisdiction]`  
+Disputes shall be resolved in courts within that region.
+
+---
+
+## ✅ Acceptance
+By accessing any content in this repository, you confirm that you’ve read and agreed to the [LICENSE](https://github.com/thaumaturgists/Music-License-Repository/blob/main/LICENSE) terms. **Written permission is mandatory for any actual use.**
+
+---
+
+## 📚 Legal Resources
+- [U.S. Copyright Office](https://www.copyright.gov)  
+- [ASCAP](https://www.ascap.com)  
+- [BMI](https://www.bmi.com)  
+- [Music Publishers Association (MPA)](https://www.mpaonline.org)
+
+---
+
+## 💬 Questions?
+Open an Issue in the repo or reach out at `[Insert Contact Email or Link]`. A music license should empower creators and inspire responsible collaboration—and that’s what this repo is here for.
+
+---
+
+Feel free to fork this repository and adapt the license model for your own audio creations.
