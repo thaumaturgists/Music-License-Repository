@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-Custom%20Music%20License-brightgreen)](./LICENSE)
 
-<img src="https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/LPI.png" alt="License Repository Image" width="200"> <!-- Adjust width and height as needed -->
+<img src="https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/legal-paper-icon.png" alt="License Repository Image" width="200"> <!-- Adjust width and height as needed -->
 
 Welcome to the **Music-License-Repository**, a secure platform for sharing and licensing original music. This repository provides artists with a lightweight licensing framework that safeguards their work while encouraging ethical reuse and collaboration.
 
