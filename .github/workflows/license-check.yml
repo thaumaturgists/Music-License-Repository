@@ -1,0 +1,26 @@
+name: Enforce License Acceptance
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  check-license:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for LICENSE_ACCEPTED.md
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const files = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number
+            });
+
+            const hasLicenseForm = files.data.some(file => file.filename === "LICENSE_ACCEPTED.md");
+
+            if (!hasLicenseForm) {
+              core.setFailed("LICENSE_ACCEPTED.md is required to proceed. Please confirm your acceptance of the license terms.");
+            }
