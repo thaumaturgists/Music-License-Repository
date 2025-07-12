@@ -1,0 +1,19 @@
+# CODEOWNERS file for Music-License-Repository
+# This defines who is responsible for specific folders or files
+# Contributors making changes to these areas will automatically request reviews from the assigned owners
+
+# Owner of everything in the repo
+*           @thaumaturgists
+
+# Owner of the LICENSE file and licensing workflows
+LICENSE     @thaumaturgists
+.github/workflows/license-check.yml  @thaumaturgists
+.github/LICENSE_ACCEPTED.md          @thaumaturgists
+
+# Owner of music and lyrics folders (if you organize them)
+audio/      @thaumaturgists
+lyrics/     @thaumaturgists
+
+# Owner of README and CONTRIBUTING guidelines
+README.md   @thaumaturgists
+CONTRIBUTING.md @thaumaturgists
