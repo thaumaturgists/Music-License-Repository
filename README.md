@@ -8,6 +8,35 @@ Welcome to the **Music-License-Repository**, a secure platform for sharing and l
 
 ---
 
+## 📁 Recommended Folder Structure
+
+```
+Music-License-Repository/
+├── audio/                     # 🎧 Original music files (MP3, WAV, FLAC)
+│   ├── dreamscape.mp3
+│   └── lullaby.wav
+│
+├── lyrics/                    # 📝 Corresponding lyrics files
+│   ├── dreamscape.txt
+│   └── lullaby.md
+│
+├── metadata/                  # 🧠 Track information (title, genre, BPM, mood)
+│   ├── dreamscape.json
+│   └── lullaby.yaml
+│
+├── license-forms/             # 📄 LICENSE_ACCEPTED.md submissions
+│   ├── user123_LICENSE_ACCEPTED.md
+│   └── alice_LICENSE_ACCEPTED.md
+│
+├── LICENSE.md                 # Custom Music License Agreement
+├── CONTRIBUTING.md            # Contribution guidelines
+├── README.md                  # Project overview
+└── .github/
+    ├── workflows/
+    │   └── license-check.yml  # GitHub Actions workflow
+    └── CODEOWNERS             # Ownership and review settings
+```
+
 ## 🚀 Getting Started
 
 To upload your own music and take advantage of this licensing model:
