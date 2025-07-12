@@ -10,7 +10,7 @@ Welcome to the **Music-License-Repository**, a secure platform for sharing and l
 
 ## 📁 Recommended Folder Structure
 
-```
+```plaintext
 Music-License-Repository/
 ├── audio/                     # 🎧 Original music files (MP3, WAV, FLAC)
 │   ├── dreamscape.mp3
@@ -36,6 +36,35 @@ Music-License-Repository/
     │   └── license-check.yml  # GitHub Actions workflow
     └── CODEOWNERS             # Ownership and review settings
 ```
+
+---
+
+## 🧭 Metadata Format Example (`dreamscape.json`)
+
+```json
+{
+  "title": "Dreamscape",
+  "artist": "Connor",
+  "genre": "Ambient",
+  "bpm": 72,
+  "key": "F# Minor",
+  "mood": ["ethereal", "uplifting"],
+  "licenseStatus": "Evaluation Only"
+}
+```
+
+---
+
+## 🧩 Bonus: Add Tags in README Index
+
+You can display uploaded works with visual icons or tags, like:
+
+| Track        | File        | Lyrics       | License Status    | Mood         |
+|--------------|-------------|--------------|--------------------|--------------|
+| Dreamscape   | ✅ MP3       | ✅ TXT        | 🚫 Pending Consent | 🌌 Ethereal  |
+| Lullaby      | ✅ WAV       | ✅ Markdown   | ✅ Licensed        | 😌 Calm      |
+
+---
 
 ## 🚀 Getting Started
 
