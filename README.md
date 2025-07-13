@@ -12,47 +12,46 @@ Welcome to the **Music-License-Repository**, a secure platform for sharing and l
 
 ```plaintext
 Music-License-Repository/
-├── audio/                     # 🎧 Original music files (MP3, WAV, FLAC)
-│   ├── dreamscape.mp3
-│   └── lullaby.wav
-│
-├── graphics/                  # 🎨 Visual assets (SVG files)
-│   ├── album-art.svg
-│   └── logo.svg
-│
-├── docs/                      # 📄 Documentation (PDF files)
-│   ├── contract.pdf
-│   └── user-guide.pdf
-│
-├── sheet-music/               # 🎶 Music notation files
-│   ├── dreamscape.ly
-│   ├── lullaby.ly
-│   ├── dreamscape.svg         # SVG sheet music
-│   └── lullaby.svg            # SVG sheet music
-│
-├── midi/                      # 🎹 MIDI files
-│   ├── dreamscape.mid
-│   └── lullaby.mid
-│
-├── lyrics/                    # 📝 Corresponding lyrics files
-│   ├── dreamscape.txt
-│   └── lullaby.md
-│
-├── metadata/                  # 🧠 Track information (title, genre, BPM, mood)
+├── docs/                            # 📚 General documentation
+├── music/
+│   ├── your-song-name/
+│   │   ├── audio/                   # 🎵 Music files (MP3, WAV, FLAC)
+│   │   │   └── your-name_your-song.mp3
+│   │   ├── graphics/                # 🎨 Visual assets (SVG)
+│   │   │   ├── your-name_album-art.svg
+│   │   │   └── your-name_logo.svg
+│   │   ├── docs/                    # 📄 Documentation (PDF)
+│   │   │   ├── your-name_contract.pdf
+│   │   │   └── your-name_user-guide.pdf
+│   │   ├── sheet-music/             # 🎼 Music notation
+│   │   │   ├── your-name_your-song.ly
+│   │   │   └── your-name_your-song.pdf       # 📄 PDF sheet music
+│   │   ├── midi/                    # 🎹 MIDI files
+│   │   │   └── your-name_your-song.mid
+│   │   ├── lyrics/                  # 📝 Lyrics files
+│   │   │   └── your-name_your-song.txt
+│   │   ├── project-files/           # 🛠️ DAW project files
+│   │   │   └── your-name_your-song.als       # 🎚️ Example for Ableton Live
+│   │   └── soundfonts/              # 🎶 Sound font files
+│   │       └── your-name_your-song.sf2       # 🎵 Example sound font file
+│   └── your-next-song/
+│       └── audio/                   # 🎵 Next Music files (MP3, WAV, FLAC)
+│           └──...
+├── metadata/                        # ℹ️ Track information
+│   ├── your-song                    
 │   ├── dreamscape.json
 │   └── lullaby.yaml
-│
-├── license-forms/             # 📄 LICENSE_ACCEPTED.md submissions
+├── license-forms/                   # 📝 License acceptance submissions
 │   ├── user123_LICENSE_ACCEPTED.md
 │   └── alice_LICENSE_ACCEPTED.md
-│
-├── LICENSE.md                 # Custom Music License Agreement
-├── CONTRIBUTING.md            # Contribution guidelines
-├── README.md                  # Project overview
+├── LICENSE_ACCEPTED.md              # ✅ Used for workflow
+├── LICENSE.md                       # 📜 Music License Agreement
+├── CONTRIBUTING.md                  # 🤝 Contribution guidelines
+├── README.md                        # 📖 Project overview
 └── .github/
     ├── workflows/
-    │   └── license-check.yml  # GitHub Actions workflow
-    └── CODEOWNERS             # Ownership and review settings
+    │   └── license-check.yml        # ⚙️ GitHub Actions workflow
+    └── CODEOWNERS                   # 👥 Ownership settings
 ```
 
 ---
