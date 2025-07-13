@@ -16,6 +16,24 @@ Music-License-Repository/
 │   ├── dreamscape.mp3
 │   └── lullaby.wav
 │
+├── graphics/                  # 🎨 Visual assets (SVG files)
+│   ├── album-art.svg
+│   └── logo.svg
+│
+├── docs/                      # 📄 Documentation (PDF files)
+│   ├── contract.pdf
+│   └── user-guide.pdf
+│
+├── sheet-music/               # 🎶 Music notation files
+│   ├── dreamscape.ly
+│   ├── lullaby.ly
+│   ├── dreamscape.svg         # SVG sheet music
+│   └── lullaby.svg            # SVG sheet music
+│
+├── midi/                      # 🎹 MIDI files
+│   ├── dreamscape.mid
+│   └── lullaby.mid
+│
 ├── lyrics/                    # 📝 Corresponding lyrics files
 │   ├── dreamscape.txt
 │   └── lullaby.md
