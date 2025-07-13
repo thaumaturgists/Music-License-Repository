@@ -13,8 +13,8 @@ Welcome to the **Music-License-Repository**, a secure platform for sharing and l
 ```plaintext
 Music-License-Repository/
 ├── docs/                            # 📚 General documentation
-├── music/
-│   ├── your-song-name/
+├── music/                           # 🎶 Music projects
+│   ├── your-song-name/              # 🎵 Your Song Name
 │   │   ├── audio/                   # 🎵 Music files (MP3, WAV, FLAC)
 │   │   │   └── your-name_your-song.mp3
 │   │   ├── graphics/                # 🎨 Visual assets (SVG)
@@ -25,22 +25,22 @@ Music-License-Repository/
 │   │   │   └── your-name_user-guide.pdf
 │   │   ├── sheet-music/             # 🎼 Music notation
 │   │   │   ├── your-name_your-song.ly
-│   │   │   └── your-name_your-song.pdf       # 📄 PDF sheet music
+│   │   │   └── your-name_your-song.pdf  # 📄 PDF sheet music
 │   │   ├── midi/                    # 🎹 MIDI files
 │   │   │   └── your-name_your-song.mid
 │   │   ├── lyrics/                  # 📝 Lyrics files
 │   │   │   └── your-name_your-song.txt
 │   │   ├── project-files/           # 🛠️ DAW project files
-│   │   │   └── your-name_your-song.als       # 🎚️ Example for Ableton Live
+│   │   │   └── your-name_your-song.als  # 🎚️ Example for Ableton Live
 │   │   └── soundfonts/              # 🎶 Sound font files
-│   │       └── your-name_your-song.sf2       # 🎵 Example sound font file
-│   └── your-next-song/
+│   │       └── your-name_your-song.sf2  # 🎵 Example sound font file
+│   └── your-next-song/              # 🎵 Your Next Song
 │       └── audio/                   # 🎵 Next Music files (MP3, WAV, FLAC)
-│           └──...
+│           └── ...
 ├── metadata/                        # ℹ️ Track information
-│   ├── your-song                    
-│   ├── dreamscape.json
-│   └── lullaby.yaml
+│   ├── your-song                    # 🎵 Your Song Metadata
+│   ├── dreamscape.json              # Example
+│   └── lullaby.yaml                 # Example
 ├── license-forms/                   # 📝 License acceptance submissions
 │   ├── user123_LICENSE_ACCEPTED.md
 │   └── alice_LICENSE_ACCEPTED.md
@@ -48,9 +48,9 @@ Music-License-Repository/
 ├── LICENSE.md                       # 📜 Music License Agreement
 ├── CONTRIBUTING.md                  # 🤝 Contribution guidelines
 ├── README.md                        # 📖 Project overview
-└── .github/
-    ├── workflows/
-    │   └── license-check.yml        # ⚙️ GitHub Actions workflow
+└── .github/                         # 🛠️ GitHub settings
+    ├── workflows/                   # ⚙️ GitHub Actions workflows
+    │   └── license-check.yml
     └── CODEOWNERS                   # 👥 Ownership settings
 ```
 
