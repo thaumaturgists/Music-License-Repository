@@ -1,0 +1,11 @@
+title: "Lullaby"
+artist: "Connor"
+genre: "Ambient"
+bpm: 72
+mood: 
+  - "Calm"
+  - "Relaxing"
+  - "Ethereal"
+description: "A soothing lullaby designed to create a peaceful atmosphere, perfect for relaxation and sleep."
+release_date: "2025-07-12"
+duration: "3:30"  # Duration in minutes:seconds
