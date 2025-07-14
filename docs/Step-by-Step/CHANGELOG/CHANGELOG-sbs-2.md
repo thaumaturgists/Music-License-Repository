@@ -138,3 +138,98 @@ jobs:
 It prints the five most recent commits in a short format so you can visually confirm which commits are present and available for `git diff`. Super useful for debugging that `fatal: bad object` issue you hit earlier.
 
 Need help turning the commit messages into bullet points in your changelog for extra flair? I can wire that up with style. 🎯📜💫
+
+==================================================
+```
+Run echo "\n## [Auto Update] - $(date +'%Y-%m-%d')" >> CHANGELOG.md [main a92a4b5] 📜 Update CHANGELOG.md automatically 1 file changed, 4 insertions(+) remote: Permission to thaumaturgists/Music-License-Repository.git denied to github-actions[bot]. fatal: unable to access 'https://github.com/thaumaturgists/Music-License-Repository/': The requested URL returned error: 403 Error: Process completed with exit code 128.
+```
+==================================================
+
+Ah, the classic `403`—GitHub’s way of saying “You shall not push, bot!” 🧙‍♂️ Here’s why it happened and how to fix it:
+
+---
+
+## 🔍 What Went Wrong
+
+The GitHub Actions bot (`github-actions[bot]`) is trying to **push changes to your repo**, but it doesn’t have permission.
+
+This usually happens because:
+
+- The workflow is running on a **pull request from a fork**, and forks can’t push to your main repo.
+- Or your repo’s settings or token scopes don’t allow push actions from `GITHUB_TOKEN`.
+
+---
+
+## ✅ How to Fix It
+
+### 🔐 1. **Ensure `GITHUB_TOKEN` Has Write Permissions**
+
+Go to your repo’s:
+
+- **Settings → Actions → General**
+- Scroll to **Workflow permissions**
+- ✅ Enable **"Read and write permissions"**
+- ✅ Check **"Allow GitHub Actions to create and approve pull requests"** (optional but useful)
+
+Save changes!
+
+---
+
+### 🧬 2. Use `GITHUB_TOKEN` Explicitly for Git Push
+
+In your workflow, update your push step to authenticate:
+
+```yaml
+- name: Push updated changelog
+  run: |
+    git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+    git pull --rebase
+    git push
+```
+
+This uses GitHub’s token securely to authorize the bot’s push.
+
+---
+
+Let me know if you'd like to add commit author info or limit changelog updates only to metadata and audio folders. I can help fine-tune that logic so it sings 🎶 instead of errors.
+
+==================================================
+```
+Where to put that in my file, does it matter where at?
+```
+==================================================
+
+Not a problem, The `git remote set-url origin` command and the `git push` step need to be placed **within the same `run` block** where your changelog is being updated and committed—but right *after* `git commit` and *before* `git push`. This ensures the bot uses the correct authentication method **just before trying to push**.
+
+Here’s the full context with everything lined up smoothly:
+
+---
+
+### 🛠️ Final Step Block (inside `update-changelog.yml`)
+
+```yaml
+- name: Update CHANGELOG if changes found
+  if: success() && (steps.detect.outputs.flag != 'No major changes')
+  run: |
+    echo "\n## [Auto Update] - $(date +'%Y-%m-%d')" >> CHANGELOG.md
+    echo "### Added or Modified Files:" >> CHANGELOG.md
+    cat changed_files.txt >> CHANGELOG.md
+    git add CHANGELOG.md
+    git commit -m "📜 Update CHANGELOG.md automatically"
+    
+    # 🔐 Authenticate using GITHUB_TOKEN before pushing
+    git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+    git pull --rebase
+    git push
+```
+
+---
+
+### ✅ Why This Works
+
+- Adds your changes and commits them locally.
+- Replaces the default origin URL with one that includes the token (secure bot access).
+- Pulls any new changes (to avoid conflicts).
+- Pushes the changelog update to `main`.
+
+If you ever move this to a reusable workflow or need version tagging later, I can help wire that in too. Want a commit author name that reflects you or your project instead of the bot next? 🎤📜🔧

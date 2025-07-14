@@ -36,4 +36,8 @@ jobs:
           cat changed_files.txt >> CHANGELOG.md
           git add CHANGELOG.md
           git commit -m "📜 Update CHANGELOG.md automatically"
+          
+          # 🔐 Authenticate using GITHUB_TOKEN before pushing
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git pull --rebase
           git push
