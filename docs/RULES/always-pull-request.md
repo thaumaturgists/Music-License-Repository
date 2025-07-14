@@ -103,7 +103,7 @@ git commit -S -m "your-commit-here"
 git push origin my-feature-branch
 ```
 
-> Bellow is from the prompt
+> Bellow is from the prompt.
 
 The error message you're encountering indicates that there are additional repository rules in place that are preventing you from pushing your feature branch. Here’s a breakdown of the issues and how to resolve them:
 
