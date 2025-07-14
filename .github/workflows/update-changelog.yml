@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Ensure we fetch enough history for diff
+
+      - name: Show recent commits
+        run: git log --oneline -n 5  # 🧪 This is your debug line
 
       - name: Set up Git
         run: |
