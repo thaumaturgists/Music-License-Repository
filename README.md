@@ -12,52 +12,58 @@ Welcome to the **Music-License-Repository**, a secure platform for sharing and l
 
 ```plaintext
 Music-License-Repository/
-├── docs/                            # 📚 General documentation
-├── music/                           # 🎶 Music projects
-│   ├── your-song-name/              # 🎵 Your Song Name
-│   │   ├── audio/                   # 🎵 Music files (MP3, WAV, FLAC)
-│   │   │   └── your-name-your-song.mp3
-│   │   ├── graphics/                # 🎨 Visual assets (SVG, PNG, JPG)
-│   │   │   ├── your-name-your-song-album-art.svg
-│   │   │   └── your-name-your-song-logo.svg
-│   │   ├── docs/                    # 📄 Documentation (PDF, DOCX)
-│   │   │   ├── your-name-your-song-contract.pdf
-│   │   │   └── your-name-your-song-user-guide.pdf
-│   │   ├── sheet-music/             🎼 Music notation (LY, PDF, SVG)
-│   │   │   ├── your-name-your-song-sheet-music.ly
-│   │   │   ├── your-name-your-song-sheet-music.pdf  # 📄 PDF sheet music
-│   │   │   └── your-name-your-song-sheet-music.svg  # 📄 SVG sheet music
-│   │   ├── midi/                    # 🎹 MIDI files (MID, MIDI)
-│   │   │   └── your-name-your-song.mid
-│   │   ├── lyrics/                  # 📝 Lyrics files (TXT, MD)
-│   │   │   └── your-name-your-song.txt
-│   │   ├── project-files/           # 🛠️ DAW project files (ALS, FLP, CWP)
-│   │   │   └── your-name-your-song.als  # 🎚️ Example for Ableton Live
-│   │   └── soundfonts/              # 🎶 Sound font files
-│   │       └── your-name-your-song.sf2  # 🎶 Sound font files (SF2, SF3)
-│   └── your-next-song/              # 🎵 Your Next Song
-│       └── audio/                   # 🎵 Next Music files (MP3, WAV, FLAC)
-│           └── connor-lullaby.wav   # Example
-├── metadata/                        # ℹ️ Track information
-│   ├── your-song                    # 🎵 Your Song Metadata
-│   ├── dreamscape.json              # Example
-│   └── lullaby.yaml                 # Example
-├── license-forms/                   # 📝 License acceptance submissions
-│   ├── user123_LICENSE_ACCEPTED.md
-│   └── alice_LICENSE_ACCEPTED.md
-├── LICENSE_ACCEPTED.md              # ✅ Used for workflow
-├── LICENSE.md                       # 📜 Music License Agreement
-├── CONTRIBUTING.md                  # 🤝 Contribution guidelines
-├── README.md                        # 📖 Project overview
-├── CHANGELOG.md                     # 📜 List of changes and updates
-├── .github/                         # 🛠️ GitHub settings
+├── _Music_Drop_Files/               # 📁 Quick drop-off directory for your work
+│   └── ©️ Feel free to quickly drop any files here if you're in a rush.
+│       All contributions made in this repository are protected by your copyright.
+│
+│
+├── .github/                          # 🛠️ GitHub settings
 │    ├── workflows/                   # ⚙️ GitHub Actions workflows
 │    │   └── license-check.yml
 │    └── CODEOWNERS                   # 👥 Ownership settings
+├── docs/                             # 📚 General documentation
+├── license-forms/                    # 📝 License acceptance submissions
+│   ├── user123_LICENSE_ACCEPTED.md   # Example
+│   └── alice_LICENSE_ACCEPTED.md     # Example
+├── metadata/                         # ℹ️ Track information
+│   ├── your-song                     # 🎵 Your Song Metadata
+│   ├── dreamscape.json               # Example
+│   └── lullaby.yaml                  # Example
 │
-└── Music_Drop_Files/                # 📁 Quick drop-off directory for your work
-    └── ©️ Feel free to quickly drop any files here if you're in a rush.
-        All contributions made in this repository are protected by your copyright.
+│
+├── music/                            # 🎶 Music projects
+│   ├── your-song-name/               # 🎵 Your Song Name
+│   │   ├── audio/                    # 🎵 Music files (MP3, WAV, FLAC)
+│   │   │   └── your-name-your-song.mp3
+│   │   ├── graphics/                 # 🎨 Visual assets (SVG, PNG, JPG)
+│   │   │   ├── your-name-your-song-album-art.svg
+│   │   │   └── your-name-your-song-logo.svg
+│   │   ├── docs/                     # 📄 Documentation (PDF, DOCX)
+│   │   │   ├── your-name-your-song-contract.pdf
+│   │   │   └── your-name-your-song-user-guide.pdf
+│   │   ├── sheet-music/              # 🎼 Music notation (LY, PDF, SVG)
+│   │   │   ├── your-name-your-song-sheet-music.ly
+│   │   │   ├── your-name-your-song-sheet-music.pdf  # 📄 PDF sheet music
+│   │   │   └── your-name-your-song-sheet-music.svg  # 📄 SVG sheet music
+│   │   ├── midi/                     # 🎹 MIDI files (MID, MIDI)
+│   │   │   └── your-name-your-song.mid
+│   │   ├── lyrics/                   # 📝 Lyrics files (TXT, MD)
+│   │   │   └── your-name-your-song.txt
+│   │   ├── project-files/            # 🛠️ DAW project files (ALS, FLP, CWP)
+│   │   │   └── your-name-your-song.als  # 🎚️ Example for Ableton Live
+│   │   └── soundfonts/               # 🎶 Sound font files
+│   │       └── your-name-your-song.sf2  # 🎶 Sound font files (SF2, SF3)
+│   └── your-next-song/               # 🎵 Your Next Song
+│       └── audio/                    # 🎵 Next Music files (MP3, WAV, FLAC)
+│           └── connor-lullaby.wav    # Example
+│
+│
+├── CHANGELOG.md                      # 📜 List of changes and updates
+├── CONTRIBUTING.md                   # 🤝 Contribution guidelines
+├── legal-paper-icon.png              # Icon for legal papers
+├── LICENSE_ACCEPTED.md               # ✅ Used for workflow
+├── LICENSE.md                        # 📜 Music License Agreement
+└── README.md                         # 📖 Project overview
 ```
 
 ---
