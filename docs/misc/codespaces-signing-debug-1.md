@@ -1,6 +1,16 @@
 # This was a Process of trying to get the codespaces back working with my GPG keys
 
-> This SBS assumes you have already created a gpg key and added it to your GitHub for use
+> This SBS assumes you have already created a gpg key and added it to your GitHub for use.
+
+> The solution was ``export GPG_TTY=$(tty)``, more details in the next document.
+
+> Also, first, do a quick: 
+```
+sudo apt-get update
+sudo apt-get upgrade -y
+```
+
+> -- If prompted to keep your local version, its your confg file, pick that.
 
 At the end of this I'm sure it was just a enviroment issue, and I am sure this will happen again in the future :(
 
