@@ -1,6 +1,6 @@
 # License Acceptance Confirmation
 
-By submitting this pull request, I confirm that I have read, understood, and accepted the terms of the **Custom Music License Agreement** outlined in the [LICENSE](./LICENSE) file.
+By submitting this pull request, I confirm that I have read, understood, and accepted the terms of the **Custom Music License Agreement** outlined in the [LICENSE](https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/LICENSE.md) file.
 
 - **GitHub Username**: `[Insert your GitHub handle]`
 - **Date of Acceptance**: `[MM-DD-YYYY]`
