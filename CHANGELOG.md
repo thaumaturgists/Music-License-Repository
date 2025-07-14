@@ -21,3 +21,7 @@ This format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Folder structure for audio, lyrics, license-forms, and metadata
 - CODEOWNERS file
 - Protected branch ruleset for licensing governance
+\n## [Auto Update] - 2025-07-14
+### Added or Modified Files:
+.github/workflows/update-changelog.yml
+docs/Step-by-Step/CHANGELOG/CHANGELOG-sbs-2.md
