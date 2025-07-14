@@ -29,3 +29,7 @@ docs/Step-by-Step/CHANGELOG/CHANGELOG-sbs-2.md
 ### Added or Modified Files:
 docs/Step-by-Step/CHANGELOG/CHANGELOG-sbs-1.md
 docs/Step-by-Step/CHANGELOG/CHANGELOG-sbs-2.md
+\n## [Auto Update] - 2025-07-14
+### Added or Modified Files:
+TODO.md
+docs/Step-by-Step/TODO/TODO-sbs.md
