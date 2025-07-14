@@ -233,3 +233,86 @@ Here’s the full context with everything lined up smoothly:
 - Pushes the changelog update to `main`.
 
 If you ever move this to a reusable workflow or need version tagging later, I can help wire that in too. Want a commit author name that reflects you or your project instead of the bot next? 🎤📜🔧
+
+==================================================
+```
+[Error - 4:35:02 PM] Request textDocument/hover failed. Message: Request textDocument/hover failed with message: Resource not accessible by integration - https://docs.github.com/rest/actions/variables#list-repository-variables Code: -32603
+```
+==================================================
+
+Ah, that error’s a bit of a pain, but we can totally untangle it.
+
+This specific issue:
+
+```plaintext
+Resource not accessible by integration
+```
+
+usually means your GitHub App, action, or IDE extension (like GitHub Copilot in VS Code or another integration) is trying to access **repository-level variables via the GitHub REST API**, but it doesn't have sufficient permissions or scopes.
+
+---
+
+## 🔧 Try This First
+
+### ✅ 1. Check Token Permissions
+
+If you're using `GITHUB_TOKEN` inside a workflow, go to:
+
+- **Settings → Actions → General**
+  - Under “Workflow permissions”:
+    - ✔️ Make sure **"Read and write permissions"** is enabled
+    - ✔️ Enable “Allow GitHub Actions to create and approve pull requests” if relevant
+
+For GitHub Apps or custom integrations, double-check their OAuth scopes.
+
+---
+
+### ✅ 2. Are You Using GitHub Codespaces or an Extension?
+
+If this error comes from an IDE (like Visual Studio Code), the extension might be trying to hover over GitHub Actions variables, but doesn't have API access or OAuth credentials set correctly.
+
+- Sign into GitHub inside the IDE
+- Re-authenticate if needed
+- Check that your extension (e.g., GitHub Copilot or GitHub Pull Requests) is up to date
+
+---
+
+### ✅ 3. Confirm Repository Variables Exist
+
+Visit the [Repository Variables section](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#env) in your repo settings and confirm:
+
+- You’re not calling a variable that hasn’t been defined
+- Your workflow has permission to read them
+
+---
+
+If you're trying to access something from that API directly (like with a script or tool), I can help structure the right request or adjust headers to handle the authentication properly.
+
+Want to drop me the relevant workflow file or script so I can take a closer look at what’s throwing the error? I’ll make sure it’s singing again. 🎶💻🔍
+
+==================================================
+```
+So its my codespace thing? Could I just refresh it first?
+```
+==================================================
+
+Yep—refreshing your Codespace is a smart first move! 🎯 If the error came from a hiccup in your GitHub integration or an expired token/session, refreshing often restores the connection cleanly.
+
+Here’s what you can try:
+
+### 🔄 Basic Refresh
+- Click the **refresh icon** in your Codespace tab  
+- Or **reload the browser window** (if you’re using Codespaces in the browser)
+
+### 🔐 If That Doesn’t Fix It:
+- Make sure you’re signed into GitHub inside your IDE
+- Go to **Command Palette** (⇧⌘P / Ctrl+Shift+P) → `GitHub: Sign In`
+- Reauthenticate your account and retry your action
+
+### ✨ Pro Tip
+Sometimes extensions (like GitHub Pull Requests or Copilot) need a manual reconnect or update. You can check extension settings or reload them individually if you're still seeing the error.
+
+If it’s related to a workflow script, let me know—I can check whether that part of your action is trying to access repository variables or secrets in a way GitHub doesn’t love.
+
+Want to try the refresh and circle back if it’s still cranky? I’ve got plenty of tricks in the bag 🛠️💫.
+
