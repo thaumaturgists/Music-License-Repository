@@ -94,6 +94,17 @@ error: failed to push some refs to 'https://github.com/thaumaturgists/Music-Lice
 ```
 ==================================================
 
+# MAKE SURE YOU SIGN YOUR COMMITS
+```
+git commit -S -m "your-commit-here"
+```
+# MAKE SURE YOU PUSH TO YOUR NEW BRANCH
+```
+git push origin my-feature-branch
+```
+
+> Bellow is from the prompt
+
 The error message you're encountering indicates that there are additional repository rules in place that are preventing you from pushing your feature branch. Here’s a breakdown of the issues and how to resolve them:
 
 ### Issues Identified
