@@ -28,7 +28,7 @@ jobs:
           # Insert a new dated subsection immediately after "## [Unreleased]"
           awk -v date="$TODAY" '
             BEGIN { inserted=0 }
-            /^## \[Unreleased\]/ && !inserted {
+            /^## $$Unreleased$$/ && !inserted {
               print
               print ""
               print "### " date
@@ -41,11 +41,17 @@ jobs:
             { print }
           ' CHANGELOG.md > tmp && mv tmp CHANGELOG.md
 
+      - name: Set up GPG
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import --batch --yes
+          git config --global user.signingkey <your-key-id>
+          git config --global commit.gpgSign true
+
       - name: Commit & push changelog update
         if: steps.detect.outputs.has_changes == 'true'
         run: |
           git config --global user.name "Auto Changelog Bot"
           git config --global user.email "noreply@example.com"
           git add CHANGELOG.md
-          git commit -m "chore: update CHANGELOG for $TODAY" || echo "No changes to commit"
+          git commit -S -m "chore: update CHANGELOG for $TODAY" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
