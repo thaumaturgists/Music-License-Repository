@@ -2,7 +2,6 @@
 
 [![License](https://img.shields.io/badge/license-Custom%20Music%20License-brightgreen)](./LICENSE)
 [![Changelog](https://img.shields.io/badge/Changelog-📜%20View%20Updates-blue)](./CHANGELOG.md)
-.
 
 <img src="https://raw.githubusercontent.com/thaumaturgists/Music-License-Repository/main/legal-paper-icon.png" alt="License Repository Image" width="200"> <!-- Adjust width and height as needed -->
 
