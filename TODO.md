@@ -6,6 +6,7 @@ A running list of tasks and ideas for this project. Completed items are archived
 
 ## 🔧 In Progress
 - [x] CHANGELOG needs timestamps and better format
+- - [] Add passphrase for gpg workflow
 - - [] Update this after project is finished
 - [ ] Refactor metadata schema for scalability
 - - [ ] licenseid
