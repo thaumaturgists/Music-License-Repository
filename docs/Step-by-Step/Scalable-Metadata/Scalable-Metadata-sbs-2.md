@@ -514,3 +514,22 @@ assets:
 - Index or ingest these YAML files into your database search layer just like JSON.
 
 Next, add a GitHub Action that runs your chosen YAML linter on every pull request to ensure clean, valid metadata before merge.
+
+==================================================
+```
+$id: "https://your-domain.com/schemas/track.schema.yaml"
+is this the GitHub url?
+```
+==================================================
+
+The `$id` field in a schema is meant to be a unique identifier that can be used when referencing or validating against it. It doesn’t have to point to a live webpage, but it often looks like a URL to make it readable and scannable.
+
+In a GitHub-hosted repository, you can absolutely update that line to point to the raw URL of your schema file. For example, if your schema is published to GitHub, you might use:
+
+```yaml
+$id: "https://raw.githubusercontent.com/<user>/<repo>/main/metadata/schemas/track.schema.yaml"
+```
+
+This makes it easier for automated validators or tools to resolve the schema remotely.
+
+Would you like help generating the exact URL based on your repo structure? I can walk you through how to make it public and linkable.
