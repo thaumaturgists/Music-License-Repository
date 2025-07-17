@@ -268,3 +268,103 @@ $ gpg --full-generate-key
 - **Use in Automation**: This setup is particularly useful for automated processes, such as CI/CD pipelines, where manual intervention is not feasible.
 
 By following these steps, you can create a GPG key without a passphrase, making it suitable for use in automated environments like GitHub Actions.
+
+==================================================
+```
+fix/update this
+```
+==================================================
+
+```yaml
+# File: .github/workflows/auto-update-changelog.yml
+
+name: Auto Update CHANGELOG
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Generate changed files list
+        id: detect
+        run: |
+          # Fetch full history so diff works reliably
+          git fetch --no-tags origin main
+
+          # List files changed in this push, filter by your directories
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
+            | grep -E '^(audio/|lyrics/|metadata/|license-forms/)' > files.txt || true
+
+          # Emit has_changes output for next steps
+          if [ -s files.txt ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Append entries under [Unreleased]
+        if: steps.detect.outputs.has_changes == 'true'
+        run: |
+          TODAY=$(date +'%Y-%m-%d')
+
+          # Insert a dated subsection right after "## [Unreleased]"
+          awk -v date="$TODAY" '
+            BEGIN { inserted=0 }
+            /^## \[Unreleased\]/ && !inserted {
+              print
+              print ""
+              print "### " date
+              print "- Added or Modified Files:"
+              while ((getline line < "files.txt") > 0) {
+                print "- " line
+              }
+              print ""
+              inserted=1
+              next
+            }
+            { print }
+          ' CHANGELOG.md > CHANGELOG.tmp
+
+          mv CHANGELOG.tmp CHANGELOG.md
+
+      - name: Import GPG key (for signed commits)
+        if: steps.detect.outputs.has_changes == 'true'
+        run: |
+          # Assumes your private key is stored in secrets as base64
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode | gpg --batch --import
+
+          # Configure Git to sign commits
+          git config --global user.signingkey "${{ secrets.GPG_SIGNING_KEY_ID }}"
+          git config --global commit.gpgSign true
+
+      - name: Commit & push changelog update
+        if: steps.detect.outputs.has_changes == 'true'
+        run: |
+          git config user.name "Auto Changelog Bot"
+          git config user.email "noreply@github.com"
+
+          git add CHANGELOG.md
+          git commit -S -m "chore: update CHANGELOG for $(date +'%Y-%m-%d')" 
+          git push
+```
+
+Key fixes and enhancements:
+
+- Switched to `actions/checkout@v3` with `fetch-depth: 0` so `git diff` works reliably.  
+- Replaced deprecated `set-output` with the new `$GITHUB_OUTPUT` convention.  
+- Moved the date (`TODAY`) into the commit step so it’s always in sync.  
+- Kept `files.txt` for listing changed paths, then fed into `awk`.  
+- Wrapped GPG import and signing behind a conditional so it only runs when there are changes.  
+- Simplified push by relying on the default `GITHUB_TOKEN`.  
+
+Drop this file into `.github/workflows/auto-update-changelog.yml`, set your secrets (`GPG_PRIVATE_KEY`, `GPG_SIGNING_KEY_ID`), and you’ll have an automated, signed changelog updater on every push to `main`.
