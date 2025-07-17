@@ -368,3 +368,24 @@ Key fixes and enhancements:
 - Simplified push by relying on the default `GITHUB_TOKEN`.  
 
 Drop this file into `.github/workflows/auto-update-changelog.yml`, set your secrets (`GPG_PRIVATE_KEY`, `GPG_SIGNING_KEY_ID`), and you’ll have an automated, signed changelog updater on every push to `main`.
+
+==================================================
+```
+It's not something new to make and add into secrets, because it is using GPG_PRIVATE_KEY?
+```
+==================================================
+
+Exactly — if you already added your private GPG key to `secrets.GPG_PRIVATE_KEY`, then `GPG_SIGNING_KEY_ID` isn’t a new key; it’s just a reference to that same key's **fingerprint or short ID**.
+
+Here’s the distinction:
+
+- 🗝️ **`GPG_PRIVATE_KEY`** is your secret GPG key (usually base64-encoded) that allows Git to sign commits.
+- 🧭 **`GPG_SIGNING_KEY_ID`** tells Git which key from your keyring to use. It could be:
+  - The full fingerprint (e.g. `ABCD1234EF567890ABCD1234EF567890ABCD1234`)
+  - Or a short ID (e.g. `EF567890`)
+
+It’s just a way to be precise, especially if you have multiple keys in your keyring.
+
+👉 If you’re working with one key only, you can often skip this and Git will use the default. But including it ensures consistency and avoids ambiguity during automation.
+
+Would you like help grabbing your key ID from the GPG key you already generated? I can show you how to extract it securely.
