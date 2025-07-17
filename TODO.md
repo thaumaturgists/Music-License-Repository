@@ -8,6 +8,7 @@ A running list of tasks and ideas for this project. Completed items are archived
 - [x] CHANGELOG needs timestamps and better format
 - - [] Update this after project is finished
 - [ ] Refactor metadata schema for scalability
+- - [ ] licenseid
 - [ ] Write draft for new license form template
 - [ ] Finalize icon set for angelic branding motif
 
