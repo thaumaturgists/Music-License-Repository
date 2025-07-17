@@ -8,36 +8,44 @@ on:
 jobs:
   changelog-update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # Ensure we fetch enough history for diff
+          fetch-depth: 2
 
-      - name: Show recent commits
-        run: git log --oneline -n 5  # 🧪 This is your debug line
+      - name: Generate changed files list
+        id: detect
+        run: |
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > files.txt
+          echo "::set-output name=has_changes::$(if grep -qE '^(audio/|lyrics/|metadata/|license-forms/)' files.txt; then echo 'true'; else echo 'false'; fi)"
 
-      - name: Set up Git
+      - name: Append to CHANGELOG under [Unreleased]
+        if: steps.detect.outputs.has_changes == 'true'
+        run: |
+          TODAY=$(date +'%Y-%m-%d')
+          # Insert a new dated subsection immediately after "## [Unreleased]"
+          awk -v date="$TODAY" '
+            BEGIN { inserted=0 }
+            /^## \[Unreleased\]/ && !inserted {
+              print
+              print ""
+              print "### " date
+              print "- Added or Modified Files:"
+              while ((getline line < "files.txt") > 0) print "- " line
+              print ""
+              inserted=1
+              next
+            }
+            { print }
+          ' CHANGELOG.md > tmp && mv tmp CHANGELOG.md
+
+      - name: Commit & push changelog update
+        if: steps.detect.outputs.has_changes == 'true'
         run: |
           git config --global user.name "Auto Changelog Bot"
           git config --global user.email "noreply@example.com"
-
-      - name: Detect major changes
-        id: detect
-        run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
-          grep -E 'audio/|lyrics/|metadata/|license-forms/' changed_files.txt || echo "No major changes" > flag.txt
-
-      - name: Update CHANGELOG if changes found
-        if: success() && (steps.detect.outputs.flag != 'No major changes')
-        run: |
-          echo "\n## [Auto Update] - $(date +'%Y-%m-%d')" >> CHANGELOG.md
-          echo "### Added or Modified Files:" >> CHANGELOG.md
-          cat changed_files.txt >> CHANGELOG.md
           git add CHANGELOG.md
-          git commit -m "📜 Update CHANGELOG.md automatically"
-          
-          # 🔐 Authenticate using GITHUB_TOKEN before pushing
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull --rebase
-          git push
+          git commit -m "chore: update CHANGELOG for $TODAY" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
