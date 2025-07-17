@@ -27,9 +27,12 @@ Music-License-Repository/
 │   ├── user123_LICENSE_ACCEPTED.md   # Example
 │   └── alice_LICENSE_ACCEPTED.md     # Example
 ├── metadata/                         # ℹ️ Track information
-│   ├── your-song                     # 🎵 Your Song Metadata
-│   ├── dreamscape.json               # Example
-│   └── lullaby.yaml                  # Example
+│   ├── schemas/                      # 🎯 Schema definitions
+|       └── track.schema.yaml
+|   └── data/                         # 🎵 Actual track metadata
+|       ├── your-song
+│       ├── dreamscape.json          # Example
+│       └── lullaby.yaml             # Example
 │
 │
 ├── music/                            # 🎶 Music projects
