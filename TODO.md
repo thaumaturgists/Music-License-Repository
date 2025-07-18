@@ -24,6 +24,7 @@ A running list of tasks and ideas for this project. Completed items are archived
 - [ ] Develop ambient moodboard from recent compositions
 
 ## ✅ Completed
+- [x] The project can simply work by rule sets, pull request with filling out a user_LICENSE_ACCEPTED.md
 - [x] Structured folders for audio, lyrics, and licenses
 - [x] Created CODEOWNERS and CHANGELOG files
 - [x] Uploaded first ethereal track with metadata tags
