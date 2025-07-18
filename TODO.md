@@ -17,6 +17,7 @@ A running list of tasks and ideas for this project. Completed items are archived
 - [ ] Design a CONTRIBUTING guide with clear visual cues
 - [ ] Add SoundFont documentation to README
 - [ ] Explore integration of numerology tags in MIDI metadata
+- [ ] License templates 
 
 ## 💡 Ideas & Exploration
 - [ ] Try hex-based color notation in LilyPond pieces
